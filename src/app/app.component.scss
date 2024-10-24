@@ -1,0 +1,46 @@
+.main-component-nav {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: lightGray;
+}
+   
+    
+.logo{
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+    
+
+.main-component-elements {
+    box-shadow: 5px 5px black;
+    background-color: gray;
+    display: flex;
+    width: auto;
+    padding: 10px;
+}
+    
+
+.college-name {
+    color: white
+}
+    
+
+.college-name-element {
+    display: flex;
+    flex-direction: coloumn;
+    justify-content: center;
+    align-items: center;
+}
+    
+.img-element {
+    position: absolute;
+    right: 95px;
+    top: 70px;
+    width: 35px;
+    height: 35px;
+}
+    
+

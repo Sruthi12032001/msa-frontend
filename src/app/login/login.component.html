@@ -1,0 +1,16 @@
+<fieldset class="login" *ngIf="login === '' || login === 'failed'">
+    <!-- <legend><img src="/assets/WhatsApp Image 2022-06-04 at 6.27.08 PM.jpeg" class="img"></legend> -->
+    <h3>Login</h3>
+    <p *ngIf="login === 'failed'" class="center">{{ error }}</p>
+    <label>EmailId<sup class="red">*</sup></label>
+    <input type="text" placeholder="mail@website.com" [(ngModel)]="mail">
+    <br>
+    <p class="red" *ngIf="!mailValidation">Enter valid email id</p>
+    <label>Password<sup class="red">*</sup></label>
+    <input type="password" placeholder="min 8 characters" [(ngModel)]="pwd">
+    <br>
+    <p class="red" *ngIf="!passwordValidation">Enter valid password</p>
+    <input type="button" (click)="loginUser()" value="Login">
+    <br>
+    <p class="style">Not registered yet? <a class="create" routerLink="/signUp">Create an account</a></p>
+</fieldset>

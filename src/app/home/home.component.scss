@@ -1,0 +1,158 @@
+table {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 5px 5px gray;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    border: 1px solid lightGray;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    border: 1px solid lightGray;
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(229, 231, 231);
+}
+
+.button {
+    width: 100px;
+    height: 35px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn {
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    margin-left: 910px;
+    background-color: white;
+    padding: 5px;
+}
+
+.navigation-bar {
+    display: flex;
+    padding: 10px;
+}
+
+.heading-element {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.student-detail {
+    margin-top: 10px;
+    border: 10px solid gray;
+    background-color: lightGray;
+    padding: 3px;
+}
+
+label {
+    width: 60px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.filter-elements {
+    display: flex;
+    justify-content: right;
+}
+
+.create-student-button {
+    width: auto;
+    background-color: white;
+    border: none;
+    padding: 5px;
+}
+
+.search-button {
+    height: 33px;
+    padding: 5px;
+    width: 180px;
+    margin-right: 15px;
+}
+
+.create-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-image {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-image {
+    width: 20px;
+    height: 20px;
+}
+
+.edit-image-element {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.image-element {
+    display: flex;
+    justify-content: center;
+}
+
+.spinner-element {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.mat-spinner {
+    ::ng-deep circle {
+        stroke: #000000;
+    }
+}
+
+::ng-deep .mat-dialog-container {
+    border-color: pink;
+}
+
+.center {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+input[type="button"] {
+    width: 277px;
+    height: 35px;
+    margin-left: 15px;
+    background-color: gray;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.center-div {
+    padding-top: 100px;
+}

@@ -1,0 +1,131 @@
+label {
+    width: 300px;
+    height: 20px;
+    margin-left: 15px;
+}
+
+input {
+    width: 250px;
+    height: 13px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: 200px;
+    margin-left: 15px;
+}
+
+input[type="button"] {
+    width: 277px;
+    height: 35px;
+    margin-left: 15px;
+    background-color: gray;
+}
+
+.login {
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    display: grid;
+    justify-self: center;
+    margin-top: 40px;
+    background-color: white;
+}
+
+legend {
+    text-align: center;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+a {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 15px;
+}
+
+.activate {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.forget {
+    font-size: 15px;
+    text-decoration: underline;
+    color: blue;
+    margin-left: 180px;
+    cursor: pointer;
+}
+
+.incorrect {
+    color: red;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.create {
+    color: gray;
+}
+
+.center {
+    color: red;
+    text-align: center;
+}
+
+.about {
+    float: left;
+    width: 500px;
+}
+
+.h3 {
+    color: red;
+    text-align: left;
+}
+
+.imgLeft {
+    width: 200px;
+    height: 200px;
+}
+
+.inner {
+    margin: 20px 80px 80px 80px;
+    border-radius: 5px;
+    width: 1002px;
+    height: 500px;
+    padding: 20px;
+}
+
+.loginBox {
+    display: inline;
+    float: left;
+    width: 500px;
+    border-right: 2px solid black;
+    margin-top: 40px;
+}
+
+.displayBox {
+    display: inline;
+    float: left;
+    width: 500px;
+    background-color: rgb(226, 247, 247);
+}
+
+.style {
+    margin-left: 30px;
+}
+
+.red {
+    color: red;
+}
+
+br {
+    height: 2px;
+}

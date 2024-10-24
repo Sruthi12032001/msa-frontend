@@ -1,0 +1,57 @@
+<p routerLink="/map">map</p>
+<div *ngIf="home">
+    <table>
+    <tr>
+        <th>S.No</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Option</th>
+        <th>View</th>
+    </tr>
+    <tr *ngFor="let modifiedUser of modifiedUsers; let sNo = index">
+        <td>{{ sNo + 1 }}</td>
+        <td>{{ modifiedUser.firstName }}</td>
+        <td>{{ modifiedUser.lastName}}</td>
+        <td>{{ modifiedUser.emailId }}</td>
+        <td>
+        <div class="image-element">
+            <div clas="edit-image-element">
+            <img
+                src="data:image/png;base64,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"
+                class="edit-image"
+                routerLink="/update/{{ modifiedUser.id }}"
+            />
+            </div>
+            <div class="edit-image-element">
+            <img
+                src="https://icon-library.com/images/android-delete-icon/android-delete-icon-26.jpg"
+                class="delete-image"
+                (click)="openDialogue(modifiedUser.id)"
+            />
+            </div>
+        </div>
+        </td>
+        <td>
+        <img
+            src="https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png"
+            width="30px"
+            height="30px"
+            (click)="display(modifiedUser.id)"
+        />
+        </td>
+    </tr>
+    </table>
+    
+</div>
+<div *ngIf="!home" class="center-div">
+        <h1 style="text-align: center">
+            {{ error }}
+        </h1>
+        <p style="text-align: center">Do you want to create?</p>
+        <br>
+        <div class="flex"> 
+            <input type="button" value="Create" routerLink="/create" >
+        </div>
+        
+</div>

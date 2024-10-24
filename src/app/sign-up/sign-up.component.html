@@ -1,0 +1,64 @@
+<fieldset class="login" *ngIf="signedIn === 'failed' || signedIn === ''">
+    <!-- <legend><img src="/assets/WhatsApp Image 2022-06-04 at 6.27.08 PM.jpeg" class="img"></legend> -->
+    <h3> Create Account</h3>
+    <p class="center" *ngIf="signedIn === 'failed'">{{ error }}</p>
+    <br>
+    <div class="container">
+        <div class="items">
+            <label>First Name<sup class="red">*</sup></label>
+            <input type="text" placeholder="First name" [(ngModel)]="f_name">
+            <br>
+            <p class="red" *ngIf="!firstNameValidation">Enter valid first name</p>
+        </div>
+        <div class="items">
+            <label>Last Name<sup class="red">*</sup></label>
+            <input type="text" placeholder="Last name" [(ngModel)]="l_name">
+            <br>
+            <p class="red" *ngIf="!lastNameValidation">Enter valid last name</p>
+        </div>
+        <div class="items">
+            <label>Age<sup class="red">*</sup></label>
+            <input type="text" placeholder="age" [(ngModel)]="age">
+            <br>
+            <p class="red" *ngIf="!ageValidation">Enter the valid age</p>
+        </div>
+        <div class="items">
+            <label>Email Id<sup class="red">*</sup></label>
+            <input type="text" placeholder="mail@website.com" [(ngModel)]="inputMail">
+            <br>
+            <p class="red" *ngIf="!mailValidation">Enter valid mail id</p>
+        </div>
+        <div class="items">
+            <label>Password<sup class="red">*</sup></label>
+            <input type="password" placeholder="min 8 characters" [(ngModel)]="pwd">
+            <br>
+            <p class="red" *ngIf="!passwordValidation">Enter valid password</p>
+        </div>
+        <div class="items">
+            <label>Address<sup class="red">*</sup></label>
+            <input type="text" placeholder="Address" [(ngModel)]="add">
+            <br>
+            <p class="red" *ngIf="!addressValidation">Enter valid Address</p>
+        </div>
+        <div class="items">
+            <label>State<sup class="red">*</sup></label>
+            <input type="text" placeholder="State" [(ngModel)]="state">
+            <br>
+            <p class="red" *ngIf="!stateValidation">Enter valid State</p>
+        </div>
+        <div class="items">
+            <label>Pin Code<sup class="red">*</sup></label>
+            <input type="text" placeholder="Pin Code" [(ngModel)]="pin">
+            <br>
+            <p class="red" *ngIf="!pinCodeValidation">Enter valid pin code</p>
+        </div>
+        <div class="items">
+            <input type="button" (click)="signUp()" value="Signup">
+        </div>
+        <div class="items">
+            <div class="signUp">Already registered? <a routerLink="/login" class="create">Login here</a></div>
+        </div> 
+    </div>
+
+    
+</fieldset>

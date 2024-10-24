@@ -1,0 +1,116 @@
+label {
+    width: 300px;
+    height: 20px;
+    margin-left: 15px;
+}
+
+input {
+    width: 250px;
+    height: 13px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: 200px; // Note: 200px for text-align doesn't make sense; consider using 'left', 'center', or 'right'.
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+input[type="button"] {
+    width: 277px;
+    height: 35px;
+    margin-left: 15px;
+    background-color: gray;
+}
+
+.login {
+    display: inline-block;
+    width: 600px;
+    margin: auto;
+    display: grid;
+    justify-self: center;
+    margin-top: 40px;
+    background-color: white;
+}
+
+legend {
+    text-align: center;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(248, 233, 236);
+}
+
+a {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 15px;
+}
+
+.activate {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.forget {
+    font-size: 15px;
+    text-decoration: underline;
+    color: blue;
+    margin-left: 180px;
+    cursor: pointer;
+}
+
+.incorrect {
+    color: red;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.create {
+    color: gray;
+}
+
+.center {
+    color: red;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+}
+
+.signUp {
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
