@@ -14,7 +14,7 @@ export class User {
 
 export interface ShipInfo {
     id?: string;
-    from: string;
+    from_: string;
     to: string;
     dtg: Date | null;
     location: string;

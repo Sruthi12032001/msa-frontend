@@ -16,6 +16,7 @@ export class MsaService {
   }
 
   login(user: Login) {
+    console.log(user)
     return this.http.post(`${environment.baseUrl}login`, user);
   }
 

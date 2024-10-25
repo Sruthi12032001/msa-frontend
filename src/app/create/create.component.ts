@@ -27,7 +27,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 export class CreateComponent implements OnInit {
   load = false;
   editData: ShipInfo = {
-    from: '',
+    from_: '',
     to: '',
     dtg: null,
     location: '',

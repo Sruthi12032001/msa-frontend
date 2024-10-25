@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     let sampleShipInfo: ShipInfo = {
       id: '12345',
-      from: 'Port of Los Angeles',
+      from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
       dtg: new Date(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
@@ -142,7 +142,7 @@ export class HomeComponent implements OnInit {
   displayComponent() {
     let sampleShipInfo: ShipInfo = {
       id: '12345',
-      from: 'Port of Los Angeles',
+      from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
       dtg: new Date(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
@@ -170,7 +170,7 @@ export class HomeComponent implements OnInit {
   updateComponent(id: string| undefined) {
     let sampleShipInfo: ShipInfo = {
       id: '12345',
-      from: 'Port of Los Angeles',
+      from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
       dtg: new Date(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
