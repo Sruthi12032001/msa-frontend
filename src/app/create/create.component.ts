@@ -36,7 +36,7 @@ export class CreateComponent implements OnInit {
     criticality: '',
     supportNeeded: '',
     weather: '',
-    destinationTime: '',
+    destinationTime: null,
     identification: '',
     nameOfShip: '',
     typeOfActivity: '',

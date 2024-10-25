@@ -23,7 +23,7 @@ export interface ShipInfo {
     criticality: string;
     supportNeeded: string;
     weather: string;
-    destinationTime: string;
+    destinationTime: Date| null;
     identification: string;
     nameOfShip: string;
     typeOfActivity: string;

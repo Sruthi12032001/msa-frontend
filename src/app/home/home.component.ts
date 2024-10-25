@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: '2023-10-10T18:00:00Z', // Example in ISO format; adjust as needed
+      destinationTime: new Date(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
@@ -151,7 +151,7 @@ export class HomeComponent implements OnInit {
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: '2023-10-10T18:00:00Z', // Example in ISO format; adjust as needed
+      destinationTime: new Date(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
@@ -179,7 +179,7 @@ export class HomeComponent implements OnInit {
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: '2023-10-10T18:00:00Z', // Example in ISO format; adjust as needed
+      destinationTime: new Date(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
