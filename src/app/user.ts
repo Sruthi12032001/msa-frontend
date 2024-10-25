@@ -28,10 +28,8 @@ export interface ShipInfo {
     nameOfShip: string;
     typeOfActivity: string;
     significance: string;
-    coordinates: {
-        latitude: number | null;
-        longitude: number | null;
-    }
+    latitude: number | null;
+    longitude: number | null;
     additionalInformation: string;
 
 }

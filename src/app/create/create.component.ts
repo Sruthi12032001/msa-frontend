@@ -41,10 +41,8 @@ export class CreateComponent implements OnInit {
     nameOfShip: '',
     typeOfActivity: '',
     significance: '',
-    coordinates: {
-        latitude: null,
-        longitude: null
-    },
+    latitude: null,
+    longitude: null,
     additionalInformation: ''
   }
   constructor(private service: MsaService, private dialogRef: MatDialogRef<CreateComponent>) {}

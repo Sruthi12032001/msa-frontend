@@ -49,10 +49,8 @@ export class HomeComponent implements OnInit {
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
       significance: 'High Priority',
-      coordinates: {
-        latitude: 34.052235, // Example latitude for Los Angeles
-        longitude: -118.243683, // Example longitude for Los Angeles
-      },
+      latitude: 34.052235, // Example latitude for Los Angeles
+      longitude: -118.243683, // Example longitude for Los Angeles
       additionalInformation: 'Requires expedited processing due to high-value cargo.',
     };
     this.modifiedShipInfo = [sampleShipInfo]
@@ -157,11 +155,10 @@ export class HomeComponent implements OnInit {
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
-      significance: 'High Priority',
-      coordinates: {
-        latitude: 34.052235, // Example latitude for Los Angeles
-        longitude: -118.243683, // Example longitude for Los Angeles
-      },
+      significance: 'High Priority',        
+      latitude: 34.052235, // Example latitude for Los Angeles
+      longitude: -118.243683, // Example longitude for Los Angeles
+      
       additionalInformation: 'Requires expedited processing due to high-value cargo.',
     };
     this.dialog.open(DisplayComponent, {
@@ -187,10 +184,8 @@ export class HomeComponent implements OnInit {
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
       significance: 'High Priority',
-      coordinates: {
-        latitude: 34.052235, // Example latitude for Los Angeles
-        longitude: -118.243683, // Example longitude for Los Angeles
-      },
+      latitude: 34.052235, // Example latitude for Los Angeles
+      longitude: -118.243683, // Example longitude for Los Angeles
       additionalInformation: 'Requires expedited processing due to high-value cargo.',
     };
     const dialogRef = this.dialog.open(EditComponent, {
