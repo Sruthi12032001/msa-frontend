@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       emailId: this.mail,
       password: this.pwd
     } 
-    if(this.validation(loginObj)) {
+    // if(this.validation(loginObj)) {
       this.service.login(loginObj).subscribe({
         next: () => {
           this.login = 'success';
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
           this.error = 'Provide valid credentials';
         }         
     })
-  }
+  // }
 }
 
   validation(loginObj: Login) {
