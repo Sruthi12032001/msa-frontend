@@ -1,0 +1,117 @@
+<h2 mat-dialog-title>View Ship Activity</h2>
+<div class="dialog-content">
+  <div class="scrollable-content">
+    <!-- Basic Information Section -->
+    <div class="section">
+      <h3 class="section-title">Basic Information</h3>
+      <div class="data-field">
+        <span class="data-label">From:</span>
+        <span class="data-value">{{ editData.from }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">To:</span>
+        <span class="data-value">{{ editData.to }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Date and Time:</span>
+        <span class="data-value">{{ editData.dtg | date: 'short' }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Location:</span>
+        <span class="data-value">{{ editData.location }}</span>
+      </div>
+    </div>
+
+    <!-- Movement Details Section -->
+    <div class="section">
+      <h3 class="section-title">Movement Details</h3>
+      <div class="data-field">
+        <span class="data-label">Direction:</span>
+        <span class="data-value">{{ editData.direction }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Speed:</span>
+        <span class="data-value">{{ editData.speed }}</span>
+      </div>
+    </div>
+
+    <!-- Criticality & Support Section -->
+    <div class="section">
+      <h3 class="section-title">Support & Criticality</h3>
+      <div class="data-field">
+        <span class="data-label">Criticality:</span>
+        <span class="data-value">{{ editData.criticality }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Support Needed:</span>
+        <span class="data-value">{{ editData.supportNeeded }}</span>
+      </div>
+    </div>
+
+    <!-- Weather and Destination Section -->
+    <div class="section">
+      <h3 class="section-title">Weather & Destination</h3>
+      <div class="data-field">
+        <span class="data-label">Weather:</span>
+        <span class="data-value">{{ editData.weather }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Destination Time:</span>
+        <span class="data-value">{{ editData.destinationTime | date: 'short' }}</span>
+      </div>
+    </div>
+
+    <!-- Identification Section -->
+    <div class="section">
+      <h3 class="section-title">Identification</h3>
+      <div class="data-field">
+        <span class="data-label">Identification:</span>
+        <span class="data-value">{{ editData.identification }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Name of Ship:</span>
+        <span class="data-value">{{ editData.nameOfShip }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Type of Activity:</span>
+        <span class="data-value">{{ editData.typeOfActivity }}</span>
+      </div>
+    </div>
+
+    <!-- Significance Section -->
+    <div class="section">
+      <h3 class="section-title">Significance</h3>
+      <div class="data-field">
+        <span class="data-label">Significance:</span>
+        <span class="data-value">{{ editData.significance }}</span>
+      </div>
+    </div>
+
+    <!-- Coordinates Section -->
+    <div class="section">
+      <h3 class="section-title">Coordinates</h3>
+      <div class="data-field">
+        <span class="data-label">Latitude:</span>
+        <span class="data-value">{{ editData.coordinates.latitude }}</span>
+      </div>
+      <div class="data-field">
+        <span class="data-label">Longitude:</span>
+        <span class="data-value">{{ editData.coordinates.longitude }}</span>
+      </div>
+    </div>
+
+    <!-- Additional Information Section -->
+    <div class="section">
+      <h3 class="section-title">Additional Information</h3>
+      <div class="data-field">
+        <span class="data-label">Additional Information:</span>
+        <span class="data-value">{{ editData.additionalInformation }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Close Button -->
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Close</button>
+  </mat-dialog-actions>
+</div>

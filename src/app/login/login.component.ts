@@ -38,21 +38,20 @@ export class LoginComponent implements OnInit {
       password: this.pwd
     } 
     if(this.validation(loginObj)) {
-      if(this.service.login(loginObj)) {
-        this.login = 'success';
-        setTimeout(() => {
+      this.service.login(loginObj).subscribe({
+        next: () => {
+          this.login = 'success';
           this.route.navigate(['home']);
-        }, 2000);
-      } else {
-        this.login = 'failed';
-        this.error = 'Provide valid credentials';
-      }
-          
-    }
+        }, 
+        error: () => {
+          this.login = 'failed';
+          this.error = 'Provide valid credentials';
+        }         
+    })
   }
+}
 
   validation(loginObj: Login) {
-    
     if(loginObj.emailId != undefined) {
       const foundmail = loginObj.emailId.match(this.mailRegex);
       if( foundmail != null && foundmail[0].length === loginObj.emailId.length && foundmail[0].length >= this.mailMin && foundmail[0].length <= this.mailMax) {

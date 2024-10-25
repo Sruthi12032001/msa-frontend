@@ -1,0 +1,106 @@
+<div class="dialog-content">
+    <!-- Header (Always at the Top) -->
+    <div class="dialog-header">
+      <h2>Create New Entry</h2>
+    </div>
+  
+    <!-- Scrollable Form Content -->
+    <div class="form-container">
+      <!-- Basic Information Section -->
+      <div class="form-group">
+        <label for="from">From</label>
+        <input type="text" id="from" [(ngModel)]="editData.from" placeholder="Enter origin" />
+      </div>
+  
+      <div class="form-group">
+        <label for="to">To</label>
+        <input type="text" id="to" [(ngModel)]="editData.to" placeholder="Enter destination" />
+      </div>
+  
+      <div class="form-group">
+        <label for="dtg">Date and Time</label>
+        <input type="datetime-local" id="dtg" [(ngModel)]="editData.dtg" />
+      </div>
+  
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" [(ngModel)]="editData.location" placeholder="Enter location" />
+      </div>
+  
+      <!-- Movement Details Section -->
+      <div class="form-group">
+        <label for="direction">Direction</label>
+        <input type="text" id="direction" [(ngModel)]="editData.direction" placeholder="Enter direction" />
+      </div>
+  
+      <div class="form-group">
+        <label for="speed">Speed</label>
+        <input type="text" id="speed" [(ngModel)]="editData.speed" placeholder="Enter speed" />
+      </div>
+  
+      <!-- Additional Details Section -->
+      <div class="form-group">
+        <label for="criticality">Criticality</label>
+        <input type="text" id="criticality" [(ngModel)]="editData.criticality" placeholder="Enter criticality" />
+      </div>
+  
+      <div class="form-group">
+        <label for="supportNeeded">Support Needed</label>
+        <input type="text" id="supportNeeded" [(ngModel)]="editData.supportNeeded" placeholder="Enter support needed" />
+      </div>
+  
+      <div class="form-group">
+        <label for="weather">Weather</label>
+        <input type="text" id="weather" [(ngModel)]="editData.weather" placeholder="Enter weather condition" />
+      </div>
+  
+      <div class="form-group">
+        <label for="destinationTime">Destination Time</label>
+        <input type="text" id="destinationTime" [(ngModel)]="editData.destinationTime" placeholder="Enter destination time" />
+      </div>
+  
+      <div class="form-group">
+        <label for="identification">Identification</label>
+        <input type="text" id="identification" [(ngModel)]="editData.identification" placeholder="Enter identification" />
+      </div>
+  
+      <div class="form-group">
+        <label for="nameOfShip">Name of Ship</label>
+        <input type="text" id="nameOfShip" [(ngModel)]="editData.nameOfShip" placeholder="Enter name of ship" />
+      </div>
+  
+      <div class="form-group">
+        <label for="typeOfActivity">Type of Activity</label>
+        <input type="text" id="typeOfActivity" [(ngModel)]="editData.typeOfActivity" placeholder="Enter activity type" />
+      </div>
+  
+      <div class="form-group">
+        <label for="significance">Significance</label>
+        <input type="text" id="significance" [(ngModel)]="editData.significance" placeholder="Enter significance" />
+      </div>
+  
+      <!-- Coordinates -->
+      <div class="form-group">
+        <label for="latitude">Latitude</label>
+        <input type="number" id="latitude" [(ngModel)]="editData.coordinates.latitude" placeholder="Enter latitude" />
+      </div>
+  
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input type="number" id="longitude" [(ngModel)]="editData.coordinates.longitude" placeholder="Enter longitude" />
+      </div>
+  
+      <!-- Additional Information Text Area -->
+      <div class="form-group">
+        <label for="additionalInformation">Additional Information</label>
+        <textarea id="additionalInformation" [(ngModel)]="editData.additionalInformation" placeholder="Enter any additional info"></textarea>
+      </div>
+    </div>
+  
+    <!-- Footer (Buttons Always at the Bottom) -->
+    <div class="dialog-footer">
+      <button (click)="cancel()">Cancel</button>
+      <button (click)="save()">Save</button>
+    </div>
+  </div>
+  

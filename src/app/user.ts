@@ -12,6 +12,30 @@ export class User {
     state!: string
 }
 
+export interface ShipInfo {
+    id?: string;
+    from: string;
+    to: string;
+    dtg: Date | null;
+    location: string;
+    direction: string;
+    speed: string;
+    criticality: string;
+    supportNeeded: string;
+    weather: string;
+    destinationTime: string;
+    identification: string;
+    nameOfShip: string;
+    typeOfActivity: string;
+    significance: string;
+    coordinates: {
+        latitude: number | null;
+        longitude: number | null;
+    }
+    additionalInformation: string;
+
+}
+
 export class Login {
     emailId!: string;
     password!: string;

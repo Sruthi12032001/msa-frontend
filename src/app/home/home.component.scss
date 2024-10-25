@@ -150,9 +150,12 @@ input[type="button"] {
 
 .flex {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 10%;
 }
 
 .center-div {
+    justify-content: end;
     padding-top: 100px;
+    
 }

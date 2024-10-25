@@ -72,16 +72,16 @@ export class SignUpComponent implements OnInit {
     }
 
     if(this.validation(user)) {
-      if(this.service.create(user)) {
-        this.signedIn = 'signed';
-        this.router.navigate(['home']);
-      } else {
-        this.signedIn = 'failed';
-        this.error = 'Provide valid credentials'
-      }
-        
+      this.service.create(user).subscribe({
+        next: () => {
+          this.signedIn = 'signed';
+          this.router.navigate(['home']);
+        }, 
+        error: () => {
+          this.signedIn = 'failed';
+        }
+      })
     }
-   
   }
 
   validation(user: User) {
