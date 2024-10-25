@@ -67,15 +67,23 @@
 </div>
 
 <div class="file-upload-container">
-    <label for="fileInput" class="file-upload-label">
-      Select File
-    </label>
+    <!-- File Select Button -->
+    <label for="fileInput" class="file-upload-label">Select File</label>
     <input
       type="file"
       id="fileInput"
       (change)="onFileSelected($event)"
       class="file-input"
     />
+  
+    <!-- Display Selected File Information -->
+    <div *ngIf="selectedFile" class="file-details">
+      <p><strong>File Name:</strong> {{ selectedFile.name }}</p>
+      <p><strong>File Size:</strong> {{ (selectedFile.size / 1024).toFixed(2) }} KB</p>
+      <p><strong>File Type:</strong> {{ selectedFile.type }}</p>
+    </div>
+  
+    <!-- Upload Button -->
     <button (click)="uploadFile()" class="upload-button">Upload</button>
   </div>
   
