@@ -24,19 +24,19 @@ export class MsaService {
   }
 
   update(shipInfo: ShipInfo) {
-    return this.http.post(`${environment}update`, shipInfo);
+    return this.http.post(`${environment.baseUrl}update`, shipInfo);
   }
 
   createShipDetails(shipInfo: ShipInfo) {
-    return this.http.post(`${environment}save`, shipInfo);
+    return this.http.post(`${environment.baseUrl}save`, shipInfo);
   }
 
   delete(id: string) {
-    return this.http.delete(`${environment}delete/${id}`);
+    return this.http.delete(`${environment.baseUrl}delete/${id}`);
   }
 
   uploadFile(base64String: string | undefined) {
     return this.http
-        .post(`${environment}upload`, { file: base64String })
+        .post(`${environment.baseUrl}upload`, { file: base64String })
   }
 }
