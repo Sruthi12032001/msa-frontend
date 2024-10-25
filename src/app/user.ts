@@ -16,14 +16,14 @@ export interface ShipInfo {
     id?: string;
     from_: string;
     to: string;
-    dtg: Date | null;
+    dtg: string;
     location: string;
     direction: string;
     speed: string;
     criticality: string;
     supportNeeded: string;
     weather: string;
-    destinationTime: Date| null;
+    destinationTime: string;
     identification: string;
     nameOfShip: string;
     typeOfActivity: string;

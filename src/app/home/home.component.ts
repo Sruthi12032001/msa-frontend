@@ -37,14 +37,14 @@ export class HomeComponent implements OnInit {
       id: '12345',
       from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
-      dtg: new Date(), // Set to the current date and time; adjust as needed
+      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
       direction: 'East',
       speed: '15 knots',
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: new Date(), // Example in ISO format; adjust as needed
+      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
@@ -144,14 +144,14 @@ export class HomeComponent implements OnInit {
       id: '12345',
       from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
-      dtg: new Date(), // Set to the current date and time; adjust as needed
+      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
       direction: 'East',
       speed: '15 knots',
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: new Date(), // Example in ISO format; adjust as needed
+      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
@@ -172,14 +172,14 @@ export class HomeComponent implements OnInit {
       id: '12345',
       from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
-      dtg: new Date(), // Set to the current date and time; adjust as needed
+      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
       location: 'Pacific Ocean',
       direction: 'East',
       speed: '15 knots',
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: new Date(), // Example in ISO format; adjust as needed
+      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
