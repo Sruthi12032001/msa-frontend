@@ -210,6 +210,37 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-  
 
+  selectedFile: File | null = null;
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      this.selectedFile = input.files[0];
+    }
+  }
+
+  uploadFile(): void {
+    if (this.selectedFile) {
+      this.uploadAsBase64();
+    } else {
+      console.log('No file selected');
+    }
+  }
+
+  private uploadAsBase64(): void {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64String = reader.result?.toString();
+      this.service.uploadFile(base64String).subscribe({
+        next: () => {
+          console.log('Upload successful:');
+        },
+        error: () => {
+          console.error('Upload error:');
+        }
+      })
+    };
+    reader.readAsDataURL(this.selectedFile!);
+  }
+  
 }

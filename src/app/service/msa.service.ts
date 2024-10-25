@@ -34,4 +34,9 @@ export class MsaService {
   delete(id: string) {
     return this.http.delete(`${environment}delete/${id}`);
   }
+
+  uploadFile(base64String: string | undefined) {
+    return this.http
+        .post(`${environment}upload`, { file: base64String })
+  }
 }

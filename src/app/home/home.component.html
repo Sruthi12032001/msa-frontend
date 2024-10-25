@@ -66,3 +66,18 @@
     </div>
 </div>
 
+<div class="file-upload-container">
+    <label for="fileInput" class="file-upload-label">
+      Select File
+    </label>
+    <input
+      type="file"
+      id="fileInput"
+      (change)="onFileSelected($event)"
+      class="file-input"
+    />
+    <button (click)="uploadFile()" class="upload-button">Upload</button>
+  </div>
+  
+
+
