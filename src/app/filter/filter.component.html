@@ -1,0 +1,63 @@
+<div class="filter-container">
+    <!-- Filter Field: From -->
+    <div class="filter-field">
+      <label for="from">From</label>
+      <select [(ngModel)]="filterCriteria.from_">
+        <option [ngValue]="null">Select From</option>
+        <option *ngFor="let option of uniqueFrom" [ngValue]="option">{{ option }}</option>
+      </select>
+    </div>
+  
+    <!-- Filter Field: To -->
+    <div class="filter-field">
+      <label for="to">To</label>
+      <select [(ngModel)]="filterCriteria.to">
+        <option [ngValue]="null">Select To</option>
+        <option *ngFor="let option of uniqueTo" [ngValue]="option">{{ option }}</option>
+      </select>
+    </div>
+  
+    <!-- Filter Field: Location -->
+    <div class="filter-field">
+      <label for="location">Location</label>
+      <select [(ngModel)]="filterCriteria.location">
+        <option [ngValue]="null">Select Location</option>
+        <option *ngFor="let option of uniqueLocation" [ngValue]="option">{{ option }}</option>
+      </select>
+    </div>
+  
+    <!-- Filter Field: Name of Ship -->
+    <div class="filter-field">
+      <label for="nameOfShip">Name of Ship</label>
+      <select [(ngModel)]="filterCriteria.nameOfShip">
+        <option [ngValue]="null">Select Name of Ship</option>
+        <option *ngFor="let option of uniqueNameOfShip" [ngValue]="option">{{ option }}</option>
+      </select>
+    </div>
+  
+    <!-- Filter Field: Severity -->
+    <div class="filter-field">
+      <label for="severity">Severity</label>
+      <select [(ngModel)]="filterCriteria.severity">
+        <option [ngValue]="null">Select Severity</option>
+        <option [ngValue]="true">Yes</option>
+        <option [ngValue]="false">No</option>
+      </select>
+    </div>
+  
+    <!-- Filter Field: Support Needed -->
+    <div class="filter-field">
+      <label for="supportNeededBool">Support Needed</label>
+      <select [(ngModel)]="filterCriteria.supportNeededBool">
+        <option [ngValue]="null">Select Support Needed</option>
+        <option [ngValue]="true">Yes</option>
+        <option [ngValue]="false">No</option>
+      </select>
+    </div>
+  
+    <!-- Apply and Reset Buttons -->
+    <div class="button-group">
+      <button class="apply-button" (click)="applyFilter()">Apply Filters</button>
+    </div>
+  </div>
+  

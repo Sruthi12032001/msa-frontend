@@ -34,3 +34,61 @@
     transform: translateX(-3px); /* Slide icon slightly on hover */
   }
   
+  .custom-button {
+    background-color: #ddd; /* Light grey background */
+    color: #333; /* Dark grey text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .custom-button:hover {
+    background-color: #bbb; /* Darker grey on hover */
+    color: #000; /* Slightly darker text */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  .custom-button:active {
+    background-color: #999; /* Even darker grey when clicked */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+    transform: translateY(2px); /* Button depress effect */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .filter-panel {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+  }
+  
+  .map {
+    flex: 1;
+    height: 100%; /* Fill remaining height */
+  }
+  
+  

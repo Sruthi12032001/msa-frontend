@@ -6,37 +6,40 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { payload, ShipInfo } from '../user';
 import { MatDialog } from '@angular/material/dialog';
 import { DisplayComponent } from '../display/display.component';
+import { FilterComponent } from '../filter/filter.component';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [MatProgressSpinnerModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [MatProgressSpinnerModule, RouterOutlet, RouterLink, RouterLinkActive, FilterComponent],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
 export class MapComponent implements OnInit {
   map!: L.Map;
   baseIconSize = 100; 
-  baseCircleRadius = 1000000;
+  baseCircleRadius = 500000;
+  initialData!: ShipInfo[];
+  resetFilterTrigger = false;
   shipdata: ShipInfo[] = [
     {
       id: '12345',
       from_: 'Port of Los Angeles',
       to: 'Port of Tokyo',
-      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
+      dtg: new Date().toDateString(),
       location: 'Pacific Ocean',
       direction: 'East',
       speed: '15 knots',
       criticality: 'Moderate',
       supportNeeded: 'Fuel Supply',
       weather: 'Clear skies',
-      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
+      destinationTime: new Date().toDateString(), 
       identification: 'IMO 1234567',
       nameOfShip: 'Evergreen',
       typeOfActivity: 'Cargo Transport',
       significance: 'High Priority',
-      latitude: 34.052235, // Example latitude for Los Angeles
-      longitude: -118.243683, // Example longitude for Los Angeles
+      latitude: 34.052235, 
+      longitude: -118.243683,
       additionalInformation: 'Requires expedited processing due to high-value cargo.',
       severity: true,
       supportNeededBool: false
@@ -57,22 +60,31 @@ circles: L.Circle[] = [];
   constructor(private service: MsaService, private dialog: MatDialog){}
 
   ngOnInit(): void {
+    // this.service.getAllForMap(this.filter).subscribe({
+    //   next: (res) => {
+        // this.initialData = res as ShipInfo[]
+        this.initialData = this.shipdata
+    //   }
+    // })
     this.initMap();
-    this.reloadData(); // Initial load of data
+    this.reloadData(); 
   }
 
   initMap(): void {
     if (this.map) {
-      this.map.remove(); // Remove the existing map instance if it exists
+      this.map.remove(); 
     }
 
-    this.map = L.map('map').setView([0, 0], 2); // Reinitialize map with default view
+    this.map = L.map('map').setView([0, 0], 2); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '© OpenStreetMap contributors',
     }).addTo(this.map);
   }
 
+  onFilterChange(filter: payload) {
+    this.filter = filter
+  }
   reloadData(): void {
     // this.service.getAllForMap(this.filter).subscribe(
     //   (data) => {
@@ -84,6 +96,20 @@ circles: L.Circle[] = [];
     //     console.error('Error fetching data', error);
     //   }
     // );
+  }
+
+  refreshData() {
+    console.log('uyes')
+    this.filter = {
+      id: null,
+      from_: null,
+      to: null,
+      location: null,
+      severity:null,
+      supportNeededBool: null,
+      nameOfShip: null
+  }
+  this.reloadData()
   }
 
   addMarkersAndCircles(): void {
@@ -112,7 +138,7 @@ circles: L.Circle[] = [];
   }
 
   getIconForZoom(zoomLevel: number): L.Icon {
-    const scale = zoomLevel / 10; // Adjust scale factor as needed
+    const scale = zoomLevel / 10; 
     const iconSize = this.baseIconSize * scale;
 
     return L.icon({

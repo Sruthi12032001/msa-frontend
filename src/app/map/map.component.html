@@ -1,6 +1,16 @@
-<button class="back-button" routerLink="/home">
-    <span class="back-icon">←</span> Back
-  </button>
-<div id="map" style="height: 100vh; width: 100%;">
-    
-</div>
+<div class="container">
+    <div class="header">
+      <button class="back-button" routerLink="/home">
+        <span class="back-icon">←</span> Back
+      </button>
+      <button (click)="refreshData()" class="custom-button">Refresh</button>
+    </div>
+  
+    <div class="content">
+      <div class="filter-panel">
+        <app-filter #filterComponent [shipData]="initialData" (filterChange)="onFilterChange($event)"></app-filter>
+      </div>
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+  
