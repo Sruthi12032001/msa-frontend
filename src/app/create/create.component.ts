@@ -43,7 +43,9 @@ export class CreateComponent implements OnInit {
     significance: '',
     latitude: null,
     longitude: null,
-    additionalInformation: ''
+    additionalInformation: '',
+    supportNeededBool: false,
+    severity: false
   }
   constructor(private service: MsaService, private dialogRef: MatDialogRef<CreateComponent>) {}
   ngOnInit(): void {

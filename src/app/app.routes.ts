@@ -3,7 +3,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
-import { MapViewComponent } from './map-view/map-view.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +18,6 @@ export const routes: Routes = [
         path: 'home', component: HomeComponent
     },
     {
-        path: 'map', component: MapViewComponent
+        path: 'map', component: MapComponent
     }
 ];

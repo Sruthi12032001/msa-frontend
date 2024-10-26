@@ -31,10 +31,22 @@ export interface ShipInfo {
     latitude: number | null;
     longitude: number | null;
     additionalInformation: string;
+    severity: boolean;
+    supportNeededBool: boolean;
 
 }
 
 export class Login {
     emailId!: string;
     password!: string;
+}
+
+export interface payload {
+    id?: string | null;
+    from_: string | null;
+    to: string | null;
+    location: string | null;
+    nameOfShip: string| null;
+    severity: boolean | null;
+    supportNeededBool: boolean | null;
 }

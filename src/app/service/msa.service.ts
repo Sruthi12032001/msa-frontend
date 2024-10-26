@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Login, ShipInfo, User } from '../user';
+import { Login, payload, ShipInfo, User } from '../user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environment/environment';
+import { parse5 } from '@angular/cdk/schematics';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,9 @@ export class MsaService {
   uploadFile(base64String: string | undefined) {
     return this.http
         .post(`${environment.baseUrl}upload`, { file: base64String })
+  }
+
+  getAllForMap(data: payload) {
+    return this.http.post(`${environment.baseUrl}getAllForMap`, data);
   }
 }

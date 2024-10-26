@@ -21,14 +21,8 @@
         <td>{{ modifiedShip.to}}</td>
         <td>{{ modifiedShip.location }}</td>
         <td>{{ modifiedShip.nameOfShip}}</td>
-        <td>
-            <span *ngIf="modifiedShip.criticality">Yes</span>
-            <span *ngIf="!modifiedShip.criticality">No</span>
-        </td>
-        <td>
-            <span *ngIf="modifiedShip.supportNeeded">Yes</span>
-            <span *ngIf="!modifiedShip.supportNeeded">No</span>
-        </td>
+        <td>{{ modifiedShip.severity ? 'Yes': 'No'}}</td>
+        <td>{{ modifiedShip.supportNeededBool ? 'Yes': 'No'}}</td>
         <td>
         <div class="image-element">
             <div clas="edit-image-element">

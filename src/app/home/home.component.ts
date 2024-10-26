@@ -52,6 +52,8 @@ export class HomeComponent implements OnInit {
       latitude: 34.052235, // Example latitude for Los Angeles
       longitude: -118.243683, // Example longitude for Los Angeles
       additionalInformation: 'Requires expedited processing due to high-value cargo.',
+      severity: true,
+      supportNeededBool: false
     };
     this.modifiedShipInfo = [sampleShipInfo]
     this.home = true
@@ -134,76 +136,6 @@ export class HomeComponent implements OnInit {
         ship.id === id)
     })
 
-  }
-
-  
-
-
-  displayComponent() {
-    let sampleShipInfo: ShipInfo = {
-      id: '12345',
-      from_: 'Port of Los Angeles',
-      to: 'Port of Tokyo',
-      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
-      location: 'Pacific Ocean',
-      direction: 'East',
-      speed: '15 knots',
-      criticality: 'Moderate',
-      supportNeeded: 'Fuel Supply',
-      weather: 'Clear skies',
-      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
-      identification: 'IMO 1234567',
-      nameOfShip: 'Evergreen',
-      typeOfActivity: 'Cargo Transport',
-      significance: 'High Priority',        
-      latitude: 34.052235, // Example latitude for Los Angeles
-      longitude: -118.243683, // Example longitude for Los Angeles
-      
-      additionalInformation: 'Requires expedited processing due to high-value cargo.',
-    };
-    this.dialog.open(DisplayComponent, {
-      width: 'auto',
-      data: sampleShipInfo
-    })
-  }
-
-  updateComponent(id: string| undefined) {
-    let sampleShipInfo: ShipInfo = {
-      id: '12345',
-      from_: 'Port of Los Angeles',
-      to: 'Port of Tokyo',
-      dtg: new Date().toDateString(), // Set to the current date and time; adjust as needed
-      location: 'Pacific Ocean',
-      direction: 'East',
-      speed: '15 knots',
-      criticality: 'Moderate',
-      supportNeeded: 'Fuel Supply',
-      weather: 'Clear skies',
-      destinationTime: new Date().toDateString(), // Example in ISO format; adjust as needed
-      identification: 'IMO 1234567',
-      nameOfShip: 'Evergreen',
-      typeOfActivity: 'Cargo Transport',
-      significance: 'High Priority',
-      latitude: 34.052235, // Example latitude for Los Angeles
-      longitude: -118.243683, // Example longitude for Los Angeles
-      additionalInformation: 'Requires expedited processing due to high-value cargo.',
-    };
-    const dialogRef = this.dialog.open(EditComponent, {
-      width: '500px',
-      data: sampleShipInfo
-      }
-    );
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if(result) {
-        if (result === true) {
-          this.updated = true;
-          this.refreshData();
-        } else {
-          this.updated = false;
-        }
-      }
-    });
   }
 
   selectedFile: File | null = null;
